@@ -4,12 +4,23 @@ body {
   color: white;
 }
 
-#gif {
+.gif {
   width: 411px;
-  height: 332px;
-  flex-shrink: 0;
+  height: 300px;
+  object-fit: cover;
   border-radius: 0px 0px 40px 40px;
-  background: url("gifs/paused.gif") center / cover no-repeat;
+}
+
+.gif-on {
+  display: none;
+}
+
+.playing .gif-on {
+  display: block;
+}
+
+.playing .gif-off {
+  display: none;
 }
 
 #cover {

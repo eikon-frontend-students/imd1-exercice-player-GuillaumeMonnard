@@ -206,9 +206,6 @@ const audioPlayer = (() => {
       document.body.classList.remove("playing")
     );
     audio.addEventListener("ended", nextTrack);
-    // Ajout des écouteurs pour changer le GIF selon l'état de lecture
-    audio.addEventListener("play", () => updateGif(true));
-    audio.addEventListener("pause", () => updateGif(false));
 
     // Gestion des raccourcis clavier
     document.addEventListener("keydown", (e) => {
@@ -243,13 +240,3 @@ const audioPlayer = (() => {
       displayError("Erreur lors du chargement des informations de la musique.")
     );
 })();
-
-//Ajout de la fonction UPDATEGIF
-const updateGif = (isPlaying) => {
-  const gifElement = document.querySelector("#gif");
-  if (gifElement) {
-    gifElement.style.background = isPlaying
-      ? 'url("gifs/playing.gif") center / cover no-repeat'
-      : 'url("gifs/paused.gif") center / cover no-repeat';
-  }
-};
