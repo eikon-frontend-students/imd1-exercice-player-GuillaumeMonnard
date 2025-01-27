@@ -1,3 +1,20 @@
+body {
+  background-color: black;
+  font-family: digital-7;
+}
+
+#cover {
+  max-width: 10%;
+  max-height: 10%;
+}
+
+#screen {
+  width: 412px;
+  height: 917px;
+  background-color: white;
+  border-radius: 5px;
+}
+
 /* Cacher le bouton pause en mode PAUSE */
 #pause-icon {
   display: none;
