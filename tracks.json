@@ -1,14 +1,26 @@
 [
   {
-    "title": "Outer Wilds",
-    "artist": "Andrew Prahlow",
-    "src": "music/OuterWilds.mp3",
-    "cover": "covers/OuterWilds.jpg"
+    "title": "Focus - feat. 3010, Epektase",
+    "artist": "Sheldon",
+    "src": "music/sheldon.mp3",
+    "cover": "covers/sheldon.jpg"
   },
   {
-    "title": "Gucci Gang",
-    "artist": "Lil Pump",
-    "src": "music/GucciGang.mp3",
-    "cover": "covers/GucciGang.png"
+    "title": "hérisson et vampire interlude charnel partie 1",
+    "artist": "tkkf",
+    "src": "music/tkkf.mp3",
+    "cover": "covers/tkkf.jpg"
+  },
+  {
+    "title": "UNE FOIS PAS DEUX",
+    "artist": "BLOU FEET",
+    "src": "music/bloufeet.mp3",
+    "cover": "covers/bloufeet.jpg"
+  },
+  {
+    "title": "Nothing Personal - A COLORS SHOW",
+    "artist": "TIF",
+    "src": "music/tif.mp3",
+    "cover": "covers/tif.jpg"
   }
 ]
