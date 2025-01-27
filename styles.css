@@ -1,6 +1,15 @@
 body {
   background-color: black;
   font-family: digital-7;
+  color: white;
+}
+
+#gif {
+  width: 411px;
+  height: 332px;
+  flex-shrink: 0;
+  border-radius: 0px 0px 40px 40px;
+  background: url("gifs/paused.gif") center / cover no-repeat;
 }
 
 #cover {
@@ -11,8 +20,8 @@ body {
 #screen {
   width: 412px;
   height: 917px;
-  background-color: white;
-  border-radius: 5px;
+  flex-shrink: 0;
+  background: linear-gradient(0deg, #04041a 0%, #04041a 100%);
 }
 
 /* Cacher le bouton pause en mode PAUSE */
