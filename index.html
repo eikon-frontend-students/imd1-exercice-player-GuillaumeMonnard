@@ -30,16 +30,27 @@
       </div>
       <!-- Deuxième box avec les controllers -->
       <div class="controllers">
-        <button id="play-pause">
-          <span id="play-icon">▶️</span>
-          <span id="pause-icon">⏸️</span>
-        </button>
+        <div class="controller1">
+          <button id="play-pause">
+            <span id="play-icon">▶️</span>
+            <span id="pause-icon">⏸️</span>
+          </button>
 
-        <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
-        <button id="prev">Précédent</button>
-        <button id="next">Suivant</button>
+          <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+          />
+        </div>
+        <div class="controller2">
+          <button id="prev">Précédent</button>
+          <button id="next">Suivant</button>
 
-        <input type="range" id="progress-bar" value="0" min="0" step="1" />
+          <input type="range" id="progress-bar" value="0" min="0" step="1" />
+        </div>
       </div>
 
       <ul id="playlist">
