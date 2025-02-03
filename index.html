@@ -33,7 +33,7 @@
         <div class="controller1">
           <button id="play-pause">
             <img src="icons/off.png" alt="play" id="play-icon" />
-            <img src="icons/on.png" alt="play" id="pause-icon" />
+            <img src="icons/on.png" alt="pause" id="pause-icon" />
             <!-- <span id="play-icon"></span> -->
             <!-- <span id="pause-icon">⏸️</span> -->
           </button>
@@ -48,10 +48,15 @@
         </div>
         <div class="controller2">
           <button id="prev">
-            <img src="icons/previous.png" alt="previous" />
+            <img src="icons/previous.png" alt="previous" id="previousicon" />
           </button>
-          <button id="next"><img src="icons/next.png" alt="next" /></button>
-          <input type="range" id="progress-bar" value="0" min="0" step="1" />
+          <button id="next">
+            <img src="icons/next.png" alt="next" id="nexticon" />
+          </button>
+          <div id="time-bar">
+            <img src="icons/progressbar.png" alt="progress" id="progress" />
+          </div>
+          <!-- <input type="range" id="progress-bar" value="0" min="0" step="1" /> -->
         </div>
       </div>
 
