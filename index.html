@@ -7,37 +7,67 @@
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-    <img id="cover" alt="cover" />
+    <div id="screen">
+      <!-- ajout d'une box gif qui change en fonction du statut de la musique -->
+      <img class="gif gif-off" src="gifs/paused.gif" alt="paused" />
+      <img class="gif gif-on" src="gifs/playing.gif" alt="playing" />
+      <!-- Première box avec la cover, le titre et l'artiste -->
+      <div class="musique">
+        <img id="cover" alt="cover" />
+        <div class="titreartiste">
+          <h3 id="track-title">Titre</h3>
+          <p id="track-artist">Artiste</p>
+        </div>
+        <button id="like">❤️</button>
+      </div>
+      <!-- Barre de durée de la musique -->
+      <div>
+        <span id="track-current-time">0:00</span>
+        /
+        <span id="track-duration">0:00</span>
+      </div>
+      <!-- Deuxième box avec les controllers -->
+      <div class="controllers">
+        <div class="controller1">
+          <button id="play-pause">
+            <img src="icons/off.png" alt="play" id="play-icon" />
+            <img src="icons/on.png" alt="pause" id="pause-icon" />
+            <!-- <span id="play-icon"></span> -->
+            <!-- <span id="pause-icon">⏸️</span> -->
+          </button>
+          <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+          />
+        </div>
+        <div class="controller2">
+          <button id="prev">
+            <img src="icons/previous.png" alt="previous" id="previousicon" />
+          </button>
+          <button id="next">
+            <img src="icons/next.png" alt="next" id="nexticon" />
+          </button>
+          <div id="time-bar">
+            <img src="icons/progressbar.png" alt="progress" id="progress" />
+          </div>
+          <!-- <input type="range" id="progress-bar" value="0" min="0" step="1" /> -->
+        </div>
+      </div>
 
-    <h3 id="track-title">Titre</h3>
-    <p id="track-artist">Artiste</p>
-    <div>
-      <span id="track-current-time">0:00</span>
-      /
-      <span id="track-duration">0:00</span>
+      <ul id="playlist">
+        <template id="track-template">
+          <li class="track">
+            <h4 class="track-title">Titre</h4>
+            <p class="track-artist">Artiste</p>
+          </li>
+        </template>
+      </ul>
     </div>
-
-    <div>
-      <button id="prev">Précédent</button>
-      <button id="play-pause">
-        <span id="play-icon">▶️</span>
-        <span id="pause-icon">⏸️</span>
-      </button>
-      <button id="next">Suivant</button>
-      <button id="like">❤️</button>
-    </div>
-
-    <input type="range" id="progress-bar" value="0" min="0" step="1" />
-    <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
-
-    <ul id="playlist">
-      <template id="track-template">
-        <li class="track">
-          <h4 class="track-title">Titre</h4>
-          <p class="track-artist">Artiste</p>
-        </li>
-      </template>
-    </ul>
   </body>
 </html>

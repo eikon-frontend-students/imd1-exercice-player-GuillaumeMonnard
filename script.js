@@ -69,8 +69,10 @@ const audioPlayer = (() => {
   const togglePlayPause = () => {
     if (audio.paused) {
       audio.play();
+      updateGif(true); // Appel à la fonction pour changer le GIF en mode "lecture"
     } else {
       audio.pause();
+      updateGif(false); // Appel à la fonction pour changer le GIF en mode "pause"
     }
   };
 
@@ -147,6 +149,7 @@ const audioPlayer = (() => {
   };
 
   // Mise à jour du volume
+
   const updateVolume = (e) => {
     const target = e.target || optionalElements.volume;
     audio.volume = target.value;
