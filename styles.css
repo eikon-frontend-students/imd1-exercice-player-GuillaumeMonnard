@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: white;
   font-family: digital-7;
   color: white;
 }
@@ -8,7 +8,7 @@ body {
   width: 411px;
   height: 300px;
   object-fit: cover;
-  border-radius: 0px 0px 40px 40px;
+  border-radius: 10px 10px 40px 40px;
 }
 
 .gif-on {
@@ -24,15 +24,20 @@ body {
 }
 
 #cover {
-  max-width: 10%;
-  max-height: 10%;
+  width: 50%;
+  height: 50%;
+  border-radius: 10px;
 }
 
 #screen {
-  width: 412px;
-  height: 917px;
+  min-width: 412px;
+  min-height: 917px;
   flex-shrink: 0;
   background: linear-gradient(0deg, #04041a 0%, #04041a 100%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Cacher le bouton pause en mode PAUSE */
@@ -91,4 +96,51 @@ input[type="range"]::-webkit-slider-runnable-track {
   box-shadow: none;
   border: none;
   background: transparent;
+}
+
+.musique {
+  display: flex;
+  gap: 20px;
+  align-items: end;
+  justify-content: center;
+}
+
+.titreartiste {
+  width: 276.953px;
+  height: 129px;
+  flex-shrink: 0;
+  border-radius: 800px 800px 5px 5px;
+  background: #000;
+  box-shadow: 0px 4px 7.8px 12px rgba(93, 93, 93, 0.25) inset;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  gap: 0px;
+  overflow: hidden;
+}
+
+#track-title {
+  text-align: left;
+  white-space: nowrap;
+  display: inline-block;
+  width: max-content; /* Le texte s'adapte à la taille de son contenu */
+  animation: marquee 8s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(
+      135%
+    ); /* Le texte commence à droite, hors de la vue */
+  }
+  100% {
+    transform: translateX(
+      -135%
+    ); /* Le texte se déplace à gauche et disparaît complètement */
+  }
+}
+
+#track-artist {
+  margin-top: 10px;
 }

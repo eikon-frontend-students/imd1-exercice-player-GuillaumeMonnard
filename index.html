@@ -10,32 +10,37 @@
 
   <body>
     <div id="screen">
-      <!-- <div id="gif"></div> -->
-
+      <!-- ajout d'une box gif qui change en fonction du statut de la musique -->
       <img class="gif gif-off" src="gifs/paused.gif" alt="paused" />
       <img class="gif gif-on" src="gifs/playing.gif" alt="playing" />
-      <img id="cover" alt="cover" />
-
-      <h3 id="track-title">Titre</h3>
-      <p id="track-artist">Artiste</p>
+      <!-- Première box avec la cover, le titre et l'artiste -->
+      <div class="musique">
+        <img id="cover" alt="cover" />
+        <div class="titreartiste">
+          <h3 id="track-title">Titre</h3>
+          <p id="track-artist">Artiste</p>
+        </div>
+        <button id="like">❤️</button>
+      </div>
+      <!-- Barre de durée de la musique -->
       <div>
         <span id="track-current-time">0:00</span>
         /
         <span id="track-duration">0:00</span>
       </div>
-
-      <div>
-        <button id="prev">Précédent</button>
+      <!-- Deuxième box avec les controllers -->
+      <div class="controllers">
         <button id="play-pause">
           <span id="play-icon">▶️</span>
           <span id="pause-icon">⏸️</span>
         </button>
-        <button id="next">Suivant</button>
-        <button id="like">❤️</button>
-      </div>
 
-      <input type="range" id="progress-bar" value="0" min="0" step="1" />
-      <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+        <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+        <button id="prev">Précédent</button>
+        <button id="next">Suivant</button>
+
+        <input type="range" id="progress-bar" value="0" min="0" step="1" />
+      </div>
 
       <ul id="playlist">
         <template id="track-template">
