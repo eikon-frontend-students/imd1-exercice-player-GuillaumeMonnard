@@ -149,6 +149,7 @@ const audioPlayer = (() => {
   };
 
   // Mise à jour du volume
+
   const updateVolume = (e) => {
     const target = e.target || optionalElements.volume;
     audio.volume = target.value;
